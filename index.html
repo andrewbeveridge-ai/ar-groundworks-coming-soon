@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0A0A0A">
-  <title>Another Realm Groundworks — Coming Soon</title>
-  <meta name="description" content="Another Realm Groundworks — Cut It. Clear It. Drop It.">
-  <meta property="og:title" content="Another Realm Groundworks — Coming Soon">
+  <meta name="theme-color" content="#1F1F1F">
+  <title>Another Realm Groundworks — Booking Now</title>
+  <meta name="description" content="Owner-operated property services in Columbus, OH. Mulch & gravel spreading, debris removal, gutter cleaning. Free estimates. (380) 261-2194.">
+  <meta property="og:title" content="Another Realm Groundworks — Booking Now">
   <meta property="og:url" content="https://anotherrealmgroundworks.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    :root { --gold:#D4AF37; --silver:#B8B8B8; --black:#0A0A0A; --white:#FAFAFA; --r3:#00BFFF;--r4:#4CBB17;--core:#4CBB17; }
+    :root { --bg-primary:#1A1A1A; --bg-accent:#2A2520; --gold:#D4AF37; --silver:#B8B8B8; --white:#FAFAFA; --text-muted:#888888; --green-accent:#4CBB17; }
     html { height:100%; -webkit-text-size-adjust:100%; }
     body {
-      width:100%; min-height:100%; background:var(--black); color:var(--white); overflow-x:hidden; overflow-y:auto;
+      width:100%; min-height:100%;
+      background:#1A1A1A;
+      background:linear-gradient(180deg,#1F1F1F 0%,#2A2520 100%);
+      background-attachment:fixed;
+      color:var(--white); overflow-x:hidden; overflow-y:auto;
       font-family:'Rajdhani',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      line-height:1.65;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-    #starCanvas { position:fixed; inset:0; z-index:0; pointer-events:none; display:block; }
     .scene {
       position:relative; z-index:2;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -114,23 +118,6 @@
       .success-msg { font-size:.9rem; letter-spacing:.03em; white-space:normal; overflow:visible; line-height:1.5; }
       .input-row button { padding:.85rem .9rem; font-size:.72rem; letter-spacing:.1em; }
     }
-    .activate-wrap { margin-bottom:1.6rem; position:relative; animation:fadeUp 1s 1.1s ease both; }
-    .activate-btn {
-      min-height:44px; padding:.65rem 2.4rem; background:transparent;
-      border:1px solid rgba(76,187,23,.45); color:#4CBB17;
-      font-family:'Rajdhani',sans-serif; font-size:.75rem; font-weight:600;
-      letter-spacing:.28em; text-transform:uppercase; cursor:pointer; border-radius:2px;
-      transition:border-color .2s,box-shadow .2s,background .2s; -webkit-tap-highlight-color:transparent;
-    }
-    .activate-btn:hover { border-color:#4CBB17; box-shadow: 0 0 16px rgba(76,187,23,.35); }
-    .activate-btn.warping {
-      border-color:#4CBB17; background:rgba(0,191,255,.06);
-      box-shadow: 0 0 24px rgba(76,187,23,.7),0 0 60px rgba(76,187,23,.2);
-    }
-    .ripple {position:absolute;top:50%;left:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;border:1.5px solid #4CBB17;pointer-events:none;opacity:0; pointer-events:none; opacity:0;
-    }
-    .ripple.active { animation:rippleOut 1s ease-out forwards; }
-    @keyframes rippleOut { 0%{transform:scale(1);opacity:.8;} 100%{transform:scale(32);opacity:0;} }
     .form-wrap { width:100%; max-width:420px; animation:fadeUp 1s 1.2s ease both; }
     .form-label {
       display:block; text-align:center;
@@ -172,9 +159,6 @@
       font-size:clamp(.82rem,2vw,1rem); color:var(--silver); opacity:.8;
       letter-spacing:.08em; animation:fadeUp 1s 1.3s ease both;
     }
-    #iconLayer { position:fixed; inset:0; z-index:1; pointer-events:none; overflow:hidden; }
-    .float-icon { position:absolute; width:36px; height:36px; opacity:0.08; pointer-events:none; }
-    .float-icon svg { width:100%; height:100%; }
     .site-footer {
       position:fixed; bottom:0; left:0; right:0;
       padding:.6rem 1rem max(.9rem,env(safe-area-inset-bottom));
@@ -208,7 +192,6 @@
       .ring-4{width:77px;height:31px;top:-15.5px;left:-38.5px;}
       .core-sphere{width:35px;height:35px;margin:-17.5px 0 0 -17.5px;}
       .brand-another{font-size:clamp(1.8rem,4.5vw,2.8rem);}
-      .activate-wrap{margin-bottom:1rem;}
     }
     @media(max-width:500px){
       #orbitalWrap{width:170px;height:170px;margin-bottom:1.4rem;}
@@ -228,15 +211,13 @@
   <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
-<canvas id="starCanvas"></canvas>
-<div id="iconLayer"></div>
 <form name="groundworks-waitlist" method="POST" data-netlify="true"
       netlify-honeypot="bot-field" id="netlifyForm" style="display:none">
   <input type="hidden" name="venture" value="Another Realm Groundworks">
   <input type="hidden" name="bot-field"><input type="email" name="email">
 </form>
 <main class="scene">
-  <p class="cs-label" style="color:#4CBB17;font-size:clamp(15px,3vw,22px);font-weight:700;letter-spacing:.16em;text-shadow:0 0 16px rgba(76,187,23,.5);margin-bottom:1.6rem;">BOOKING NOW &mdash; FREE ESTIMATES<span style="display:block;margin-top:.5rem;color:var(--silver);font-size:clamp(11px,2vw,13px);font-weight:500;letter-spacing:.2em;text-transform:none;opacity:.8;">Full website launching this week</span></p>
+  <p class="cs-label" style="color:var(--green-accent);font-size:clamp(15px,3vw,22px);font-weight:700;letter-spacing:.16em;text-shadow:0 0 16px rgba(76,187,23,.5);margin-bottom:1.6rem;">BOOKING NOW &mdash; FREE ESTIMATES<span style="display:block;margin-top:.5rem;color:var(--silver);font-size:clamp(11px,2vw,13px);font-weight:500;letter-spacing:.2em;text-transform:none;opacity:.8;">Full website launching this week</span></p>
   <div id="orbitalWrap">
     <div class="ring-mover" id="m1"><div class="ring ring-1" id="ring1"></div></div>
     <div class="ring-mover" id="m2"><div class="ring ring-2" id="ring2"></div></div>
@@ -248,8 +229,8 @@
   <p class="brand-dba">Groundworks</p>
   <div class="gold-rule"></div>
   <p class="pillars">
-    <span class="p-desk">Cut It &nbsp;◆&nbsp; Clear It &nbsp;◆&nbsp; Drop It</span>
-    <span class="p-mob">◆&nbsp; Cut It<br>◆&nbsp; Clear It<br>◆&nbsp; Drop It</span>
+    <span class="p-desk">Cut It &nbsp;◆&nbsp; Spread It &nbsp;◆&nbsp; Haul It</span>
+    <span class="p-mob">◆&nbsp; Cut It<br>◆&nbsp; Spread It<br>◆&nbsp; Haul It</span>
   </p>
   <div class="form-wrap">
     <label class="form-label">Get Your Free Estimate</label>
@@ -261,93 +242,14 @@
     <div class="error-msg" id="errorMsg"></div>
     <p class="privacy-note">Free estimates &nbsp;·&nbsp; Owner-operated &nbsp;·&nbsp; Columbus &amp; suburbs</p>
   </div>
-  <div class="contact-email" style="margin-top:1.4rem;line-height:2;text-align:center;">
-    <a href="sms:+13802612194" style="color:#4CBB17;text-decoration:none;">&#128241;&nbsp; Text fastest response: (380) 261-2194</a><br>
+  <div class="contact-email" style="margin-top:1.8rem;line-height:2;text-align:center;">
+    <a href="sms:+13802612194" style="color:var(--green-accent);text-decoration:none;">&#128241;&nbsp; Text fastest response: (380) 261-2194</a><br>
     <a href="mailto:info@anotherrealmgroundworks.com" style="color:inherit;text-decoration:none;">&#9993;&#65039;&nbsp; Email: info@anotherrealmgroundworks.com</a><br>
     <a href="tel:+13802612194" style="color:inherit;text-decoration:none;">&#128222;&nbsp; Or call: (380) 261-2194</a>
   </div>
 </main>
 <footer class="site-footer">&copy; 2026 Another Realm Groundworks &nbsp;|&nbsp; anotherrealmgroundworks.com</footer>
 <script>
-/* ── Star field — passive twinkling background ── */
-const canvas=document.getElementById('starCanvas'),ctx=canvas.getContext('2d');
-let S=[];
-function resize(){canvas.width=innerWidth;canvas.height=innerHeight;}
-function initStars(){S=[];for(let i=0;i<200;i++)S.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.4+0.2,b:Math.random()*0.5+0.1,ph:Math.random()*Math.PI*2,sp:0.4+Math.random()*1.2});}
-function drawStars(t){ctx.clearRect(0,0,canvas.width,canvas.height);S.forEach(s=>{const a=s.b+(1-s.b)*0.5*(1+Math.sin(s.ph+t*s.sp*0.001));ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.283);ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.fill();s.ph+=0.006;});requestAnimationFrame(drawStars);}
-resize();initStars();requestAnimationFrame(drawStars);
-window.addEventListener('resize',()=>{resize();initStars();});
-
-/* ── Icon Definitions ── */
-const ICON_DEFS=[
-  {litColor:'#00BFFF',count:4,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>'},
-  {litColor:'#4CBB17',count:4,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 14h16L12 2z"/><path d="M12 14v8"/><path d="M9 22h6"/></svg>'},
-  {litColor:'#D4AF37',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h14a2 2 0 0 0 2-2v-3H5a2 2 0 0 0-2 2v3z"/><circle cx="7" cy="20" r="2"/><circle cx="17" cy="20" r="2"/><path d="M19 12V8"/><path d="M19 8l-5-5"/><path d="M14 3H9"/></svg>'},
-  {litColor:'#00BFFF',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v13"/><path d="M8 11c0 4 4 6 4 6s4-2 4-6"/><line x1="10" y1="2" x2="14" y2="2"/></svg>'},
-  {litColor:'#4CBB17',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'},
-  {litColor:'#D4AF37',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h18v-8H2z"/><path d="M20 9l2 2v6"/><path d="M2 17l3-8h10"/><circle cx="6" cy="20" r="1.5"/><circle cx="16" cy="20" r="1.5"/></svg>'}
-];
-
-/* ── Floating ambient icons ── */
-const iconLayer=document.getElementById('iconLayer');
-const floatIcons=[];
-(function(){
-  ICON_DEFS.forEach(def=>{
-    for(let i=0;i<def.count;i++){
-      const el=document.createElement('div');
-      el.className='float-icon';el.innerHTML=def.svg;
-      el.style.color=def.litColor;
-      const obj={el,x:Math.random()*innerWidth,y:Math.random()*innerHeight,
-        vx:((Math.random()-.5)*1.0)||(0.3),vy:((Math.random()-.5)*1.0)||(0.3),
-        ph:Math.random()*Math.PI*2,color:def.litColor,warping:false};
-      el.style.left=obj.x+'px';el.style.top=obj.y+'px';
-      iconLayer.appendChild(el);floatIcons.push(obj);
-    }
-  });
-  function tick(t){
-    floatIcons.forEach(ic=>{
-      if(!ic.warping){
-        ic.x+=ic.vx;ic.y+=ic.vy;
-        if(ic.x<-40)ic.x=innerWidth+20;if(ic.x>innerWidth+40)ic.x=-20;
-        if(ic.y<-40)ic.y=innerHeight+20;if(ic.y>innerHeight+40)ic.y=-20;
-        ic.el.style.left=ic.x+'px';ic.el.style.top=ic.y+'px';
-        ic.el.style.opacity=0.07+0.04*Math.sin(ic.ph+t*0.0005);
-        ic.el.style.transform='scale(1)';
-        ic.el.style.filter='none';
-      } else {
-        const cx=innerWidth/2,cy=innerHeight/2;
-        const dx=ic.x-cx,dy=ic.y-cy;
-        const dist=Math.sqrt(dx*dx+dy*dy)||1;
-        const speed=ic.warpSpd*(1+dist/400);
-        ic.x+=ic.wvx*speed;ic.y+=ic.wvy*speed;
-        const sc=Math.max(0.5,Math.min(2.5,dist/100));
-        ic.el.style.transform=`scale(${sc})`;
-        ic.el.style.opacity=String(Math.min(0.85,dist/150));
-        ic.el.style.left=ic.x+'px';ic.el.style.top=ic.y+'px';
-        ic.el.style.filter=`drop-shadow(0 0 ${4*sc}px ${ic.color})`;
-        if(ic.x<-80||ic.x>innerWidth+80||ic.y<-80||ic.y>innerHeight+80)resetWarpIcon(ic);
-      }
-      ic.ph+=0.006;
-    });
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
-
-function resetWarpIcon(ic){
-  const cx=innerWidth/2,cy=innerHeight/2;
-  const angle=Math.random()*Math.PI*2;
-  const r=Math.random()*20+5;
-  ic.x=cx+Math.cos(angle)*r;ic.y=cy+Math.sin(angle)*r;
-  ic.wvx=Math.cos(angle);ic.wvy=Math.sin(angle);
-  ic.warpSpd=0.8+Math.random()*1.2;
-  ic.el.style.left=ic.x+'px';ic.el.style.top=ic.y+'px';
-}
-window.addEventListener('resize',()=>floatIcons.forEach(ic=>{
-  if(ic.x>innerWidth)ic.x=Math.random()*innerWidth;
-  if(ic.y>innerHeight)ic.y=Math.random()*innerHeight;
-}));
-
 /* ── Orbital ── */
 const movers=['m1','m2','m3','m4'].map(id=>document.getElementById(id));
 const coreEl=document.getElementById('coreSphere');
@@ -370,25 +272,6 @@ function cycle(){
   setTimeout(()=>{movers.forEach(m=>{m.style.animation='none';m.style.transition='opacity .5s';m.style.opacity='1';m.style.transform='translate(0px,0px)';});coreEl.classList.remove('brightened');cyc=false;setTimeout(cycle,3000);},rb+3*600+400+200);
 }
 setTimeout(cycle,2000);
-
-/* ── Activate — icons fly toward user ── */
-let activated=false;
-function activateWarp(){
-  if(activated)return;activated=true;
-  ['ripple1','ripple2','ripple3'].forEach((id,i)=>setTimeout(()=>{
-    const r=document.getElementById(id);r.classList.remove('active');void r.offsetWidth;r.classList.add('active');
-  },i*200));
-  const btn=document.getElementById('activateBtn');
-  btn.disabled=true;btn.classList.add('warping');
-  btn.textContent='Activated ✦';
-  document.getElementById('coreSphere').classList.add('brightened');
-  floatIcons.forEach((ic,idx)=>setTimeout(()=>{ic.warping=true;resetWarpIcon(ic);},idx*40));
-  setTimeout(()=>{
-    floatIcons.forEach(ic=>{ic.warping=false;ic.el.style.transform='scale(1)';ic.el.style.filter='none';ic.el.style.opacity='0.07';});
-    document.getElementById('coreSphere').classList.remove('brightened');
-    setTimeout(()=>{btn.textContent='Activate';btn.classList.remove('warping');btn.disabled=false;activated=false;},500);
-  },7000);
-}
 
 /* ── Email ── */
 const SU='https://script.google.com/macros/s/AKfycbxr-7JSECtFFEY84AIi31Vib3TxdUT71N8-fBeJmYCdAXozSxri-r_LFJvJ4p_dvA3eZw/exec';
