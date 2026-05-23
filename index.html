@@ -111,12 +111,17 @@
     }
     .p-mob { display:none; }
     .p-desk { display:inline; }
+    .nowrap { white-space:nowrap; }
+    .br-mob { display:none; }
     @media(max-width:500px){
       .p-mob { display:block; text-align:center; line-height:1.8; }
       .p-desk { display:none; }
       .pillars { font-size:clamp(.7rem,3.2vw,.85rem); letter-spacing:.06em; }
       .success-msg { font-size:.9rem; letter-spacing:.03em; white-space:normal; overflow:visible; line-height:1.5; }
       .input-row button { padding:.85rem .9rem; font-size:.72rem; letter-spacing:.1em; }
+      .bullet-desk { display:none; }
+      .br-mob { display:inline; }
+      .contact-email { margin-bottom:3rem; }
     }
     .form-wrap { width:100%; max-width:420px; animation:fadeUp 1s 1.2s ease both; }
     .form-label {
@@ -240,12 +245,12 @@
     </div>
     <div class="success-msg" id="successMsg">&#10022;&nbsp; Got it &mdash; we&rsquo;ll reach out shortly to discuss your project.</div>
     <div class="error-msg" id="errorMsg"></div>
-    <p class="privacy-note">Free estimates &nbsp;·&nbsp; Owner-operated &nbsp;·&nbsp; Columbus &amp; suburbs</p>
+    <p class="privacy-note">Free estimates &nbsp;·&nbsp; Owner-operated<span class="bullet-desk">&nbsp;·&nbsp;</span><br class="br-mob">Columbus &amp; suburbs</p>
   </div>
   <div class="contact-email" style="margin-top:1.8rem;line-height:2;text-align:center;">
-    <a href="sms:+13802612194" style="color:var(--green-accent);text-decoration:none;">&#128241;&nbsp; Text fastest response: (380) 261-2194</a><br>
-    <a href="mailto:info@anotherrealmgroundworks.com" style="color:inherit;text-decoration:none;">&#9993;&#65039;&nbsp; Email: info@anotherrealmgroundworks.com</a><br>
-    <a href="tel:+13802612194" style="color:inherit;text-decoration:none;">&#128222;&nbsp; Or call: (380) 261-2194</a>
+    <a href="sms:+13802612194" style="color:var(--green-accent);text-decoration:none;">&#128241;&nbsp; Text fastest response: <span class="nowrap">(380) 261-2194</span></a><br>
+    <a href="mailto:info@anotherrealmgroundworks.com" style="color:inherit;text-decoration:none;">&#9993;&#65039;&nbsp; Email: <span class="nowrap">info@anotherrealmgroundworks.com</span></a><br>
+    <a href="tel:+13802612194" style="color:inherit;text-decoration:none;">&#128222;&nbsp; Or call: <span class="nowrap">(380) 261-2194</span></a>
   </div>
 </main>
 <footer class="site-footer">&copy; 2026 Another Realm Groundworks &nbsp;|&nbsp; anotherrealmgroundworks.com</footer>
