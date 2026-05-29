@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Unlinked scaffold — not for indexing until KB-09 launch gate (portfolio piece #1)
+Disallow: /design.html
+
+Sitemap: https://anotherrealmgroundworks.com/sitemap.xml
