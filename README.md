@@ -1,4 +1,4 @@
-# Another Realm Groundworks — Website
+# Arch City Property Care — Website
 
 Owner-operated property services in Columbus, OH and surrounding suburbs.
 Static HTML / CSS / JS — **no framework, no build step.** Just open the files
@@ -43,6 +43,6 @@ photography, `grep -rn "PHOTO-SLOT" .` and replace each placeholder block with a
 
 ## Deploy
 
-Netlify, pointed at `anotherrealmgroundworks.com`. Build then review before any
+Netlify, pointed at `archcitypropertycare.com`. Build then review before any
 deploy (P56). `/design.html` goes live only at the KB-09 launch gate
 (portfolio piece #1) — see the TODO in that file.

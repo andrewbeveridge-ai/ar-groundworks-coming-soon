@@ -1,5 +1,5 @@
 /* ============================================================
-   Another Realm Groundworks — shared site JS
+   Arch City Property Care — shared site JS
    - Mobile nav toggle
    - Active nav link highlight
    - Quote form submit -> Apps Script (AR Lead Collector v1)
@@ -91,8 +91,8 @@
       location: data.location,
       notes:   data.notes,
       contact: data.contact,
-      venture: 'Another Realm Groundworks',
-      source:  location.hostname || 'anotherrealmgroundworks.com'
+      venture: 'Arch City Property Care',
+      source:  location.hostname || 'archcitypropertycare.com'
     });
 
     fetch(ENDPOINT + '?' + qs.toString(), { method: 'GET', mode: 'no-cors' })

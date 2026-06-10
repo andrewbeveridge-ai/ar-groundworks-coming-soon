@@ -1,4 +1,4 @@
-# Photo Placeholders — Another Realm Groundworks
+# Photo Placeholders — Arch City Property Care
 
 Every image on the site ships as a **branded-graphic placeholder** (charcoal block,
 logo mark, tagline, slot label) — never stock. Each placeholder:
