@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1A1A1A">
+  <meta name="theme-color" content="#0D3A1F">
 
   <!-- SCAFFOLD ONLY — UNLINKED + NOINDEX.
-       This page goes live only when portfolio rendering #1 exists (KB-09 launch gate).
-       TODO: when portfolio piece #1 lands — (1) remove the noindex tag below,
-       (2) add /design.html to nav + sitemap.xml, (3) drop it from robots.txt Disallow. -->
+       This page has its OWN gate (KB-09: portfolio rendering #1) that is SEPARATE
+       from the site-wide GL-bind no-index gate. Even on the BIND-DAY flip, keep this
+       page's noindex until KB-09 is met. When portfolio piece #1 lands —
+       (1) remove the noindex tag below, (2) add /design.html to nav + sitemap.xml,
+       (3) drop it from robots.txt Disallow. -->
   <meta name="robots" content="noindex, nofollow">
 
   <title>AI Landscape Design — Arch City Property Care</title>
@@ -16,7 +18,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -28,119 +30,68 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark">◆</span>
-      <span class="brand-name"><span class="brand-gold">Arch City</span><span class="brand-sub">Property Care</span></span>
+    <a class="brand" href="/" aria-label="Arch City Property Care — home">
+      <img class="brand-logo" src="/assets/brand/logo-horizontal-web.png" alt="Arch City Property Care" width="160" height="46">
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    <nav class="site-nav">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="site-nav" id="site-nav">
       <a href="/">Home</a>
       <a href="/services.html">Services</a>
+      <a href="/lawn-waitlist.html">Lawn Waitlist</a>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
-      <a class="btn btn-green nav-cta" href="/quote.html">Get Free Estimate</a>
+      <a class="btn btn-primary nav-cta" href="/quote.html">Get a Free Quote</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">AI Landscape Design</span>
-        <h1 class="gold-text">See your yard before you spend a dollar.</h1>
+        <span class="eyebrow">AI Landscape Design · Coming Soon</span>
+        <h1>See your yard before you spend a dollar.</h1>
         <p class="lead">Send a photo of your space. We render a finished, eco-friendly landscape — native-plant friendly — so you can see exactly what you're buying before any work begins. No guesswork. No regret.</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="/quote.html?service=AI%20Landscape%20Design">Join the Early-Customer List</a>
+          <a class="btn btn-light" href="/lawn-waitlist.html">Ask to be notified</a>
         </div>
       </div>
       <div class="hero-media">
-        <!-- PHOTO-SLOT: design-sample | 800x600 | swap with real portfolio rendering #1 -->
-        <div class="photo-placeholder ph-4x3" data-slot="design-sample">
-          <span class="pp-mark">◆</span><span class="pp-brand">AI Landscape Design</span>
-          <span class="pp-tag">Before / after rendering</span>
-          <span class="pp-slot">design-sample · 800×600</span>
+        <div class="hero-badge">
+          <img src="/assets/brand/logo-stacked-web.png" alt="Arch City Property Care" width="320" height="311" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== How it works ===== -->
-  <section class="bg-accent">
+  <section class="bg-cream2">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">How It Works</span>
         <h2>From Photo to Finished Vision</h2>
       </div>
-      <div class="card-grid">
-        <div class="svc-card"><div class="svc-body">
-          <h3>1 · Share Your Space</h3>
-          <p>Send photos of your yard and tell us how you want to use it — entertaining, low-maintenance, kid-and-pet friendly, curb appeal.</p>
-        </div></div>
-        <div class="svc-card"><div class="svc-body">
-          <h3>2 · See the Render</h3>
-          <p>We produce an AI rendering of your space transformed — beds, plantings, hardscape and flow — so you can react to something real.</p>
-        </div></div>
-        <div class="svc-card"><div class="svc-body">
-          <h3>3 · Refine</h3>
-          <p>Love it? Tweak it? We revise the design until it's right — plant choices, layout, materials.</p>
-        </div></div>
-        <div class="svc-card"><div class="svc-body">
-          <h3>4 · Build It</h3>
-          <p>When you're ready, the same owner-operator who does our property work brings the plan to life. Or take the design and run with it yourself.</p>
-        </div></div>
+      <div class="steps">
+        <div class="step"><div class="step-n">1</div><h3>Share Your Space</h3><p>Send photos of your yard and tell us how you want to use it — entertaining, low-maintenance, kid-and-pet friendly, curb appeal.</p></div>
+        <div class="step"><div class="step-n">2</div><h3>See the Render</h3><p>We produce an AI rendering of your space transformed — beds, plantings, hardscape and flow — so you can react to something real.</p></div>
+        <div class="step"><div class="step-n">3</div><h3>Refine</h3><p>Love it? Tweak it? We revise the design until it's right — plant choices, layout, materials.</p></div>
+        <div class="step"><div class="step-n">4</div><h3>Build It</h3><p>When you're ready, the same owner-operator behind Arch City Property Care brings the plan to life — or take the design and run with it yourself.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Tiers (no anchor prices — custom quote framing) ===== -->
   <section>
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Design Tiers</span>
-        <h2>Pick the Depth That Fits</h2>
-        <p class="section-lead">Every tier is quoted to your project — free estimate, custom quote. No anchor prices.</p>
-      </div>
-      <div class="card-grid">
-        <div class="svc-card"><div class="svc-body">
-          <span class="badge badge-soon">Tier 1</span>
-          <h3>Concept Render</h3>
-          <p>A single AI rendering of your space reimagined — the fastest way to see the potential and decide your direction.</p>
-          <div class="card-cta"><a href="/quote.html?service=AI%20Landscape%20Design%20-%20Concept">Get a Free Quote</a></div>
-        </div></div>
-        <div class="svc-card"><div class="svc-body">
-          <span class="badge badge-soon">Tier 2</span>
-          <h3>Design + Plant Plan</h3>
-          <p>Multiple renders, a refined layout, and a native-plant-friendly planting plan you can hand to any installer.</p>
-          <div class="card-cta"><a href="/quote.html?service=AI%20Landscape%20Design%20-%20Plant%20Plan">Get a Free Quote</a></div>
-        </div></div>
-        <div class="svc-card"><div class="svc-body">
-          <span class="badge badge-soon">Tier 3</span>
-          <h3>Design + Build</h3>
-          <p>The full path — design, revisions, and installation by the same owner-operator behind Arch City Property Care.</p>
-          <div class="card-cta"><a href="/quote.html?service=AI%20Landscape%20Design%20-%20Design%20%2B%20Build">Get a Free Quote</a></div>
-        </div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Eco / native angle ===== -->
-  <section class="bg-accent">
     <div class="container">
       <div class="featured">
         <div>
           <span class="eyebrow">Designed for Where You Live</span>
-          <h2 class="gold-text">Eco-Friendly &amp; Native-Plant Friendly</h2>
+          <h2>Eco-Friendly &amp; Native-Plant Friendly</h2>
           <p>The best landscapes work with the local climate, not against it. We lean into native and pollinator-friendly plantings that need less water, less chemical input, and less fuss — beautiful spaces that are easier on the planet and your weekends.</p>
-          <a class="btn btn-gold mt-2" href="/quote.html?service=AI%20Landscape%20Design">Join the Early-Customer List</a>
+          <a class="btn btn-primary mt-2" href="/lawn-waitlist.html">Ask to be notified</a>
         </div>
-        <div>
-          <!-- PHOTO-SLOT: design-sample | 800x600 | swap with real portfolio rendering -->
-          <div class="photo-placeholder ph-4x3" data-slot="design-sample">
-            <span class="pp-mark">◆</span><span class="pp-brand">Native-Plant Render</span>
-            <span class="pp-slot">design-sample · 800×600</span>
+        <div class="hero-media">
+          <div class="hero-badge" style="max-width:300px;">
+            <img src="/assets/brand/logo-stacked-web.png" alt="Arch City Property Care AI landscape design" width="280" height="272" loading="lazy">
           </div>
         </div>
       </div>
@@ -151,7 +102,7 @@
     <div class="container">
       <h2>Be first to <span class="gold-text">see your yard transformed.</span></h2>
       <p>Early access — join the list and we'll reach out the moment we open the books.</p>
-      <a class="btn btn-gold" href="/quote.html?service=AI%20Landscape%20Design">Join the Early-Customer List</a>
+      <a class="btn btn-light" href="/lawn-waitlist.html">Ask to be notified</a>
     </div>
   </section>
 
@@ -159,10 +110,13 @@
 
 <footer class="site-footer">
   <div class="container">
+    <img class="footer-logo" src="/assets/brand/logo-reversed-web.png" alt="Arch City Property Care" width="175" height="50" loading="lazy">
     <p class="footer-contact">
       <a href="tel:+13802612194" class="nowrap">(380) 261-2194</a>
-      <span class="sep">◆</span>
+      <span class="sep">·</span>
       <a href="mailto:info@archcitypropertycare.com" class="nowrap">info@archcitypropertycare.com</a>
+      <span class="sep">·</span>
+      <span class="nowrap">Columbus &amp; surrounding suburbs</span>
     </p>
     <p class="footer-legal">© 2026 Arch City Property Care | archcitypropertycare.com</p>
     <p class="footer-sub"><a href="/legal.html#terms">Terms</a><span class="sep">·</span><a href="/legal.html#privacy">Privacy</a><span class="sep">·</span><a href="/legal.html#insurance">Insurance Disclosure</a></p>

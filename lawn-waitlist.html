@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0D3A1F">
+  <!-- SITE-WIDE NO-INDEX until GL insurance binds (bind gate). See BIND-DAY-FLIP.md. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Lawn Care Waitlist — Arch City Property Care | Columbus, OH</title>
+  <meta name="description" content="Join the Arch City Property Care lawn waitlist. We launch mowing routes one neighborhood at a time — add your ZIP and you're first on the route near you.">
+  <link rel="canonical" href="https://archcitypropertycare.com/lawn-waitlist.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lawn Care Waitlist — Arch City Property Care">
+  <meta property="og:description" content="We launch mowing routes one neighborhood at a time. Add your ZIP and you're first on the route near you.">
+  <meta property="og:url" content="https://archcitypropertycare.com/lawn-waitlist.html">
+  <meta property="og:image" content="https://archcitypropertycare.com/assets/og-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Arch City Property Care — home">
+      <img class="brand-logo" src="/assets/brand/logo-horizontal-web.png" alt="Arch City Property Care" width="160" height="46">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/lawn-waitlist.html">Lawn Waitlist</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a class="btn btn-primary nav-cta" href="/quote.html">Get a Free Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:0;">
+        <span class="eyebrow">Lawn Care · Neighborhood Waitlist</span>
+        <h1>Lawn Care — Coming to Your Neighborhood</h1>
+        <p class="section-lead">We launch mowing routes <strong style="color:var(--cream);">one neighborhood at a time</strong>, so every customer gets reliable, same-day service instead of rushed, scattered visits. Add your address to the waitlist — when enough neighbors near you sign up, your route goes live and <strong style="color:var(--cream);">you're first on it.</strong> Founding customers lock in priority scheduling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Waitlist form ===== -->
+  <section>
+    <div class="container">
+      <div class="form-card">
+        <p class="form-reassurance">Join the waitlist — your ZIP tells us which route you're on.</p>
+
+        <!-- [WAITLIST] form → source="archcity-website-waitlist",
+             service_wanted="Recurring Mowing (Waitlist)". ZIP is required client-side
+             and sent in BOTH location and zip. Field names, hardcoded entity/dba,
+             honeypot and consent fields are wired in /js/site.js — preserve exactly. -->
+        <form id="waitlistForm" novalidate>
+          <div class="field">
+            <label for="w-name">Name <span class="req">*</span></label>
+            <input type="text" id="w-name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="w-phone">Phone</label>
+            <input type="tel" id="w-phone" name="phone" autocomplete="tel" inputmode="tel">
+          </div>
+
+          <div class="field">
+            <label for="w-email">Email</label>
+            <input type="email" id="w-email" name="email" autocomplete="email" inputmode="email">
+            <p class="field-hint">Add a phone number or an email so we can reach you — at least one is required.</p>
+          </div>
+
+          <div class="field">
+            <label for="w-zip">Property ZIP code <span class="req">*</span></label>
+            <input type="text" id="w-zip" name="zip" inputmode="numeric" pattern="\d{5}" maxlength="5" placeholder="e.g. 43004" autocomplete="postal-code" required>
+            <p class="field-hint">We use your ZIP to place you on the right neighborhood route.</p>
+          </div>
+
+          <!-- Honeypot: must stay empty; off-screen and aria-hidden. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="w-hp">Leave this field blank</label>
+            <input type="text" id="w-hp" name="_hp" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Consent: OPTIONAL — never required to submit.
+               ⚠️ consent_text is a PLACEHOLDER pending attorney review (see js/site.js). -->
+          <div class="consent-row">
+            <input type="checkbox" id="w-consent" name="consent_sms">
+            <label for="w-consent">I agree to receive calls and text messages from Arch City Property Care about my request. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help. Consent is not a condition of service.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Join the Lawn Waitlist</button>
+          <div class="form-error" id="waitlistError" role="alert" aria-live="assertive"></div>
+        </form>
+
+        <div class="form-success" id="waitlistSuccess" role="status" aria-live="polite">
+          <div class="fs-mark" aria-hidden="true">◆</div>
+          <h3>You're on the list!</h3>
+          <p>Thanks — you're on the waitlist for your neighborhood. We'll reach out the moment your route is close to going live. Questions? Call or text <a href="tel:+13802612194" class="nowrap">(380) 261-2194</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Route progress — STATIC explainer (no live counter) ===== -->
+  <section class="bg-cream2">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How Routes Go Live</span>
+        <h2>Progress to Launch, Not a Countdown</h2>
+        <p class="section-lead">There's no ticking clock and no false scarcity here. Routes grow as neighbors join — here's how it works.</p>
+      </div>
+      <div class="route-explainer">
+        <div class="step"><div class="step-n">1</div><h3>Join the waitlist</h3><p>Add your name and ZIP. That's it — no commitment, no card.</p></div>
+        <div class="step"><div class="step-n">2</div><h3>Neighbors add up</h3><p>We group sign-ups by neighborhood so visits stay tight and same-day.</p></div>
+        <div class="step"><div class="step-n">3</div><h3>Your route nears launch</h3><p><strong>You'll see this once your route is close</strong> — a simple progress note will appear here for your area when it's nearly ready.</p></div>
+        <div class="step"><div class="step-n">4</div><h3>You're first on it</h3><p>When the route goes live, founding waitlist customers get priority scheduling.</p></div>
+      </div>
+      <div class="route-note" style="margin-top:1.6rem;">
+        <strong>Why a waitlist instead of just booking?</strong> Routes can grow in any neighborhood at any time. Building them deliberately is how we keep mowing dependable and same-day — rather than spreading one owner thin across the whole city.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Need work now? ===== -->
+  <section class="cta-strip">
+    <div class="container">
+      <h2>Need property work <span class="gold-text">right now?</span></h2>
+      <p>Hauling, gutters, cleanups, and material delivery are available today — no waitlist required.</p>
+      <a class="btn btn-light" href="/quote.html">Get a Free Quote</a>
+      <a class="cta-phone" href="tel:+13802612194">Or call/text (380) 261-2194</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <img class="footer-logo" src="/assets/brand/logo-reversed-web.png" alt="Arch City Property Care" width="175" height="50" loading="lazy">
+    <p class="footer-contact">
+      <a href="tel:+13802612194" class="nowrap">(380) 261-2194</a>
+      <span class="sep">·</span>
+      <a href="mailto:info@archcitypropertycare.com" class="nowrap">info@archcitypropertycare.com</a>
+      <span class="sep">·</span>
+      <span class="nowrap">Columbus &amp; surrounding suburbs</span>
+    </p>
+    <p class="footer-legal">© 2026 Arch City Property Care | archcitypropertycare.com</p>
+    <p class="footer-sub"><a href="/legal.html#terms">Terms</a><span class="sep">·</span><a href="/legal.html#privacy">Privacy</a><span class="sep">·</span><a href="/legal.html#insurance">Insurance Disclosure</a></p>
+  </div>
+</footer>
+
+<script src="/js/site.js"></script>
+</body>
+</html>

@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1A1A1A">
-  <title>Arch City Property Care — Owner-Operated Property Services in Columbus, OH</title>
-  <meta name="description" content="Owner-operated property care in Columbus & suburbs: mulch, gravel & soil delivery and spreading, debris removal, junk hauling, brush clearing, storm cleanup, gutter cleaning. Free estimates — custom quote. (380) 261-2194.">
+  <meta name="theme-color" content="#0D3A1F">
+  <!-- SITE-WIDE NO-INDEX until GL insurance binds (bind gate). See BIND-DAY-FLIP.md. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Arch City Property Care | Columbus Hauling, Gutters &amp; Lawn</title>
+  <meta name="description" content="Owner-operated property care in Columbus, OH — junk hauling, gutter cleaning, cleanups & lawn care. Same trusted pro every visit. Get a free quote.">
   <link rel="canonical" href="https://archcitypropertycare.com/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Arch City Property Care — Columbus Property Services">
-  <meta property="og:description" content="Owner-operated property care in Columbus & suburbs. Free estimates — custom quote.">
+  <meta property="og:title" content="Arch City Property Care | Columbus Hauling, Gutters & Lawn">
+  <meta property="og:description" content="Owner-operated property care in Columbus, OH — same trusted pro every visit. Get a free quote.">
   <meta property="og:url" content="https://archcitypropertycare.com/">
-  <!-- PHOTO-SLOT: og-share | 1200x630 | swap with real photo -->
-  <meta property="og:image" content="https://archcitypropertycare.com/assets/og-share.svg">
+  <meta property="og:image" content="https://archcitypropertycare.com/assets/og-share.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -27,7 +27,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <!-- Local business structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,28 +35,28 @@
     "url": "https://archcitypropertycare.com",
     "telephone": "+1-380-261-2194",
     "email": "info@archcitypropertycare.com",
+    "image": "https://archcitypropertycare.com/assets/og-share.png",
     "areaServed": "Columbus, OH and surrounding suburbs",
-    "description": "Owner-operated property services: material delivery and spreading, debris removal, hauling, brush clearing, storm and construction cleanup, gutter cleaning.",
+    "description": "Owner-operated property care in Columbus, OH: junk removal and hauling, property/storm/construction cleanup, material delivery and spreading, gutter cleaning, window cleaning, leaf and seasonal cleanups, and light landscaping.",
     "openingHours": ["Mo-Fr 07:30-17:30", "Sa 08:00-12:00"]
   }
   </script>
 </head>
 <body>
 
-<!-- ===== Header ===== -->
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark">◆</span>
-      <span class="brand-name"><span class="brand-gold">Arch City</span><span class="brand-sub">Property Care</span></span>
+    <a class="brand" href="/" aria-label="Arch City Property Care — home">
+      <img class="brand-logo" src="/assets/brand/logo-horizontal-web.png" alt="Arch City Property Care" width="160" height="46">
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    <nav class="site-nav">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="site-nav" id="site-nav">
       <a href="/">Home</a>
       <a href="/services.html">Services</a>
+      <a href="/lawn-waitlist.html">Lawn Waitlist</a>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
-      <a class="btn btn-green nav-cta" href="/quote.html">Get Free Estimate</a>
+      <a class="btn btn-primary nav-cta" href="/quote.html">Get a Free Quote</a>
     </nav>
   </div>
 </header>
@@ -69,139 +68,238 @@
     <div class="container hero-grid">
       <div class="hero-copy">
         <span class="eyebrow">Owner-Operated · Columbus &amp; Suburbs</span>
-        <h1><span class="gold-text">Property care done right —</span> by the guy who shows up.</h1>
-        <p class="lead">Mulch, gravel &amp; soil delivery and spreading, debris removal, junk hauling, brush clearing, storm cleanup and more. No revolving crew — the same owner-operator on every job.</p>
+        <h1>Columbus Property Care — Done by the Owner, Every Visit</h1>
+        <p class="lead">Hauling, gutter cleaning, cleanups, material delivery, and lawn care from one accountable local pro — never a rotating crew. Book the work and get the same trusted hands every time.</p>
         <div class="hero-actions">
-          <a class="btn btn-green" href="/quote.html">Get Your Free Estimate</a>
-          <a class="btn btn-ghost" href="/services.html">See Services</a>
+          <a class="btn btn-primary" href="/quote.html">Get a Free Quote</a>
+          <a class="btn btn-ghost-light" href="/lawn-waitlist.html">Join Your Neighborhood's Lawn Waitlist</a>
         </div>
+        <ul class="hero-trust">
+          <li><span class="ti-mark">◆</span>Owner-operated</li>
+          <li><span class="ti-mark">◆</span>Licensed &amp; Insured</li>
+          <li><span class="ti-mark">◆</span>Columbus &amp; surrounding suburbs</li>
+          <li><span class="ti-mark">◆</span>Now booking Summer 2026</li>
+        </ul>
       </div>
       <div class="hero-media">
-        <!-- PHOTO-SLOT: hero-truck-trailer | 1600x900 | swap with real photo -->
-        <div class="photo-placeholder ph-16x9" data-slot="hero-truck-trailer">
-          <span class="pp-mark">◆</span>
-          <span class="pp-brand">Arch City Property Care</span>
-          <span class="pp-slot">hero-truck-trailer · 1600×900</span>
+        <div class="hero-badge">
+          <img src="/assets/brand/logo-stacked-web.png" alt="Arch City Property Care — lawn care, material delivery, debris removal" width="320" height="311">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Trust signals ===== -->
-  <section class="bg-accent" style="padding-top:2.4rem;padding-bottom:2.4rem;">
+  <!-- ===== The Problem ===== -->
+  <section class="bg-cream2">
     <div class="container">
-      <ul class="trust-row">
-        <li><span class="ti-mark">◆</span>Owner-Operated</li>
-        <li><span class="ti-mark">◆</span>Columbus &amp; Suburbs</li>
-        <li><span class="ti-mark">◆</span>Free Estimates</li>
-        <li><span class="ti-mark">◆</span>Same-Day Response</li>
-      </ul>
+      <div class="section-head">
+        <span class="eyebrow">The Problem</span>
+        <h2>One Owner Who Actually Shows Up</h2>
+      </div>
+      <p style="max-width:760px;margin:0 auto;text-align:center;color:var(--ink-soft);font-size:1.12rem;">Tired of property crews that no-show, send a different face every week, or leave a mess behind? Most outfits are stretched thin and impossible to pin down. Arch City Property Care is one owner who answers the phone, shows up when promised, and stands behind every job — because his name is on it.</p>
     </div>
   </section>
 
-  <!-- ===== Services grid ===== -->
+  <!-- ===== Services — Available Now ===== -->
   <section>
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">What We Do</span>
-        <h2>Hauling &amp; Cleanup, Done Properly</h2>
-        <p class="section-lead">Free estimate, custom quote — every job priced to the work in front of us, never a one-size sticker.</p>
+        <span class="eyebrow">Services — Available Now</span>
+        <h2>What We Do</h2>
+        <p class="section-lead">Every service links to the same free quote — no prices on the page, just an honest, all-in custom quote for your job.</p>
       </div>
       <div class="card-grid">
 
         <div class="svc-card">
-          <!-- PHOTO-SLOT: service-haul | 800x600 | swap with real photo -->
-          <div class="photo-placeholder ph-4x3" data-slot="service-haul">
-            <span class="pp-mark">◆</span><span class="pp-brand">Material Delivery</span><span class="pp-slot">service-haul · 800×600</span>
-          </div>
-          <div class="svc-body">
-            <h3>Material Delivery &amp; Spreading</h3>
-            <p>Mulch, soil, topsoil, gravel, stone &amp; sand — delivered and spread where you need it. We don't just dump and leave.</p>
-            <div class="card-cta"><a href="/quote.html?service=Material%20Delivery%20%26%20Spreading">Get a Free Quote</a></div>
-          </div>
+          <div class="svc-icon" aria-hidden="true">◆</div>
+          <h3>Junk Removal &amp; Hauling</h3>
+          <p>Dump-trailer hauling for junk, debris, and cleanouts. We load it, haul it, and leave the spot clean.</p>
+          <div class="card-cta"><a href="/quote.html?service=Junk%20Removal%20%26%20Hauling">Get a Free Quote</a></div>
         </div>
 
         <div class="svc-card">
-          <!-- PHOTO-SLOT: service-cleanup | 800x600 | swap with real photo -->
-          <div class="photo-placeholder ph-4x3" data-slot="service-cleanup">
-            <span class="pp-mark">◆</span><span class="pp-brand">Cleanup &amp; Hauling</span><span class="pp-slot">service-cleanup · 800×600</span>
-          </div>
-          <div class="svc-body">
-            <h3>Debris Removal &amp; Junk Hauling</h3>
-            <p>Debris removal, junk hauling, brush clearing, leaf removal, storm cleanup, construction site &amp; move-in/move-out cleanup.</p>
-            <div class="card-cta"><a href="/quote.html?service=Debris%20Removal%20%26%20Hauling">Get a Free Quote</a></div>
-          </div>
+          <div class="svc-icon" aria-hidden="true">◆</div>
+          <h3>Property, Storm &amp; Construction Cleanup</h3>
+          <p>Move-outs, construction debris, storm damage, and brush clearing — handled in a single trip.</p>
+          <div class="card-cta"><a href="/quote.html?service=Property%2C%20Storm%20%26%20Construction%20Cleanup">Get a Free Quote</a></div>
         </div>
 
         <div class="svc-card">
-          <!-- PHOTO-SLOT: service-haul | 800x600 | reuse haul slot art -->
-          <div class="photo-placeholder ph-4x3" data-slot="service-haul">
-            <span class="pp-mark">◆</span><span class="pp-brand">Gutter Cleaning</span><span class="pp-slot">service-haul · 800×600</span>
-          </div>
-          <div class="svc-body">
-            <h3>Gutter Cleaning</h3>
-            <p>Clear gutters and downspouts before they cost you a roof or a foundation. Quick, clean, owner-handled.</p>
-            <div class="card-cta"><a href="/quote.html?service=Gutter%20Cleaning">Get a Free Quote</a></div>
-          </div>
+          <div class="svc-icon" aria-hidden="true">◆</div>
+          <h3>Material Delivery &amp; Spreading</h3>
+          <p>Mulch, soil, gravel, stone, sand, and topsoil delivered and spread exactly where you want it.</p>
+          <div class="card-cta"><a href="/quote.html?service=Material%20Delivery%20%26%20Spreading">Get a Free Quote</a></div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon" aria-hidden="true">◆</div>
+          <h3>Gutter Cleaning &amp; Gutter-Guard Installation</h3>
+          <p>Clogged gutters cleared and flushed — plus gutter-guard installation so you stop climbing the ladder.</p>
+          <div class="card-cta"><a href="/quote.html?service=Gutter%20Cleaning%20%26%20Gutter-Guard%20Installation">Get a Free Quote</a></div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon" aria-hidden="true">◆</div>
+          <h3>Window Cleaning</h3>
+          <p>Streak-free exterior windows for a sharper-looking home.</p>
+          <div class="card-cta"><a href="/quote.html?service=Window%20Cleaning">Get a Free Quote</a></div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon" aria-hidden="true">◆</div>
+          <h3>Leaf Removal &amp; Seasonal Cleanups</h3>
+          <p>Spring and fall cleanups that actually get hauled away — not bagged and left at the curb.</p>
+          <div class="card-cta"><a href="/quote.html?service=Leaf%20Removal%20%26%20Seasonal%20Cleanups">Get a Free Quote</a></div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon" aria-hidden="true">◆</div>
+          <h3>Light Landscaping (by the job)</h3>
+          <p>Bed cleanups, shrub and hedge trimming, weed pulling, and plantings — priced per project.</p>
+          <div class="card-cta"><a href="/quote.html?service=Light%20Landscaping">Get a Free Quote</a></div>
         </div>
 
       </div>
-      <p class="text-center mt-2"><a class="btn btn-ghost" href="/services.html">View All Services</a></p>
     </div>
   </section>
 
-  <!-- ===== Featured: AI Landscape Design ===== -->
-  <section class="bg-accent">
+  <!-- ===== Lawn Care — Coming to Your Neighborhood ===== -->
+  <section class="bg-forest">
     <div class="container">
-      <div class="featured">
+      <div class="featured" style="background:transparent;border-color:rgba(246,233,218,.2);">
         <div>
-          <span class="badge badge-soon">Early Access · Coming Soon</span>
-          <h2 class="gold-text">AI Landscape Design</h2>
-          <p>See your yard before you spend a dollar. We're building an AI design service that shows you a finished, eco-friendly landscape — native-plant friendly — rendered from a photo of your space.</p>
-          <p class="note-soon">Early access — join the list and you're first in line.</p>
-          <a class="btn btn-gold mt-2" href="/quote.html?service=AI%20Landscape%20Design">Join the Early-Customer List</a>
+          <span class="eyebrow">Lawn Care — Coming to Your Neighborhood</span>
+          <h2>You're First on the Route</h2>
+          <p style="color:rgba(246,233,218,.85);">We launch mowing routes <strong style="color:var(--cream);">one neighborhood at a time</strong>, so every customer gets reliable, same-day service instead of rushed, scattered visits. Add your address to the waitlist — when enough neighbors near you sign up, your route goes live and <strong style="color:var(--cream);">you're first on it.</strong> Founding customers lock in priority scheduling.</p>
+          <a class="btn btn-light mt-2" href="/lawn-waitlist.html">Join the Lawn Waitlist</a>
+          <p style="color:rgba(246,233,218,.7);font-size:.95rem;margin-top:1.4rem;">Also coming soon: <strong style="color:var(--cream);">pressure washing</strong>, <strong style="color:var(--cream);">holiday lighting</strong>, and <strong style="color:var(--cream);">AI landscape design</strong> — see your yard reimagined before you spend a dollar. Ask to be notified.</p>
         </div>
-        <div>
-          <!-- PHOTO-SLOT: design-sample | 800x600 | swap with real photo -->
-          <div class="photo-placeholder ph-4x3" data-slot="design-sample">
-            <span class="pp-mark">◆</span><span class="pp-brand">AI Landscape Design</span>
-            <span class="pp-tag">See your yard before you spend a dollar</span>
-            <span class="pp-slot">design-sample · 800×600</span>
+        <div class="hero-media">
+          <div class="hero-badge" style="max-width:300px;">
+            <img src="/assets/brand/logo-stacked-web.png" alt="Arch City Property Care lawn waitlist" width="280" height="272" loading="lazy">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Lawn care coming soon ===== -->
+  <!-- ===== Why Arch City ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why Arch City</span>
+        <h2>Property Care You Don't Have to Babysit</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3><span class="diamond">◆</span> Same Owner, Every Visit</h3>
+          <p>You get one accountable person who knows your property — not a different crew each time. Consistency is the whole point.</p>
+        </div>
+        <div class="why-item">
+          <h3><span class="diamond">◆</span> Premium Standards</h3>
+          <p>Clean job sites, professional work, and your property treated like our own. All-in pricing with tax included — no surprise add-ons.</p>
+        </div>
+        <div class="why-item">
+          <h3><span class="diamond">◆</span> Local &amp; Responsive</h3>
+          <p>Columbus-based and easy to reach. Call or text the owner directly at <a href="tel:+13802612194" class="nowrap">(380) 261-2194</a>.</p>
+        </div>
+        <div class="why-item">
+          <h3><span class="diamond">◆</span> Tech-Forward</h3>
+          <p>Fast online quotes today; AI landscape design on the way — visualize your yard before any work begins.</p>
+        </div>
+        <div class="why-item">
+          <h3><span class="diamond">◆</span> Eco-Minded</h3>
+          <p>A low-impact, native-friendly approach to your grounds and gardens.</p>
+        </div>
+        <div class="why-item">
+          <h3><span class="diamond">◆</span> Licensed &amp; Insured</h3>
+          <p>Ohio vendor's license plus $1M general liability behind every job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How It Works ===== -->
+  <section class="bg-cream2">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How It Works</span>
+        <h2>Simple, Start to Finish</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step-n">1</div><h3>Request a free quote</h3><p>Or join the lawn waitlist for your neighborhood.</p></div>
+        <div class="step"><div class="step-n">2</div><h3>Get a clear, all-in price</h3><p>Tax included, no hidden fees.</p></div>
+        <div class="step"><div class="step-n">3</div><h3>We do the work</h3><p>Same owner, clean finish, every time.</p></div>
+        <div class="step"><div class="step-n">4</div><h3>Pay the easy way</h3><p>Zelle (preferred), cash, check, or card.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== What Neighbors Are Saying =====
+       PLACEHOLDER — DO NOT INVENT testimonials or ratings.
+       Populate only with real feedback after the first jobs:
+       "[Specific outcome the customer got]." — [First name], [Neighborhood] -->
   <section>
     <div class="container text-center">
-      <span class="eyebrow">On The Way</span>
-      <h2>Lawn Care Coming Soon</h2>
-      <p class="section-lead">Lawn care, light landscaping, pressure washing and holiday lighting are on the way. Join our early-customer list and we'll reach out the moment they're live.</p>
-      <p class="mt-2"><a class="btn btn-green" href="/quote.html?service=Lawn%20Care%20(early%20list)">Join the Early-Customer List</a></p>
+      <span class="eyebrow">What Neighbors Are Saying</span>
+      <h2>Real Reviews, Coming Soon</h2>
+      <p class="section-lead">We're just getting started in Columbus. Verified feedback from our first customers will appear here — no stock quotes, no invented stars.</p>
     </div>
   </section>
 
-  <!-- ===== CTA strip ===== -->
+  <!-- ===== FAQ ===== -->
+  <section class="bg-cream2">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Good Questions, Straight Answers</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Where do you work?</summary>
+          <p>Columbus and the surrounding suburbs. Not sure if you're in range? Call or text <a href="tel:+13802612194" class="nowrap">(380) 261-2194</a> — we'll confirm in a minute.</p>
+        </details>
+        <details>
+          <summary>How does pricing work?</summary>
+          <p>Every job gets a free, custom quote. The price you're quoted is all-in with tax included — no hidden fees, no surprise charges at the end.</p>
+        </details>
+        <details>
+          <summary>Why is lawn care a waitlist instead of just bookable?</summary>
+          <p>We build mowing routes neighborhood by neighborhood so every customer gets dependable, same-day service. Once enough neighbors near you join, your route goes live and you're first in line.</p>
+        </details>
+        <details>
+          <summary>Who actually shows up?</summary>
+          <p>The owner. Every visit. You're not handing your property to a rotating crew — you get the same person who answers the phone.</p>
+        </details>
+        <details>
+          <summary>How do I pay?</summary>
+          <p>Zelle is preferred (it saves the processing fee and helps us keep pricing fair), but we also take cash, check, or card.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Final CTA ===== -->
   <section class="cta-strip">
     <div class="container">
-      <h2>Ready for a <span class="gold-text">free estimate?</span></h2>
-      <p>Free estimates, no obligation, same-day response. Columbus and surrounding suburbs — call to confirm.</p>
-      <a class="btn btn-green" href="/quote.html">Get Your Free Estimate</a>
-      <p class="mt-2"><a href="tel:+13802612194" class="nowrap" style="color:var(--white);font-weight:700;">📞 (380) 261-2194</a></p>
+      <h2>Ready for property care you don't have to think twice about?</h2>
+      <p>One owner, clean work, and a price with no surprises.</p>
+      <a class="btn btn-light" href="/quote.html">Get a Free Quote</a>
+      <a class="cta-phone" href="tel:+13802612194">Or call/text (380) 261-2194</a>
     </div>
   </section>
 
 </main>
 
-<!-- ===== Footer ===== -->
 <footer class="site-footer">
   <div class="container">
+    <img class="footer-logo" src="/assets/brand/logo-reversed-web.png" alt="Arch City Property Care" width="175" height="50" loading="lazy">
     <p class="footer-contact">
       <a href="tel:+13802612194" class="nowrap">(380) 261-2194</a>
-      <span class="sep">◆</span>
+      <span class="sep">·</span>
       <a href="mailto:info@archcitypropertycare.com" class="nowrap">info@archcitypropertycare.com</a>
+      <span class="sep">·</span>
+      <span class="nowrap">Columbus &amp; surrounding suburbs</span>
     </p>
     <p class="footer-legal">© 2026 Arch City Property Care | archcitypropertycare.com</p>
     <p class="footer-sub"><a href="/legal.html#terms">Terms</a><span class="sep">·</span><a href="/legal.html#privacy">Privacy</a><span class="sep">·</span><a href="/legal.html#insurance">Insurance Disclosure</a></p>

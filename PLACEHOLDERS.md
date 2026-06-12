@@ -1,31 +1,30 @@
-# Photo Placeholders — Arch City Property Care
+# Brand Imagery — Arch City Property Care
 
-Every image on the site ships as a **branded-graphic placeholder** (charcoal block,
-logo mark, tagline, slot label) — never stock. Each placeholder:
+The site ships **logo-driven**, not photo-driven. Real brand logo assets are
+used throughout (header, footer, hero, feature cards); there are no stock photos
+and no fake testimonials.
 
-- carries `class="photo-placeholder" data-slot="SLOTNAME"` with a fixed aspect ratio
-  (so a real photo drops in 1:1 with no layout shift),
-- is preceded by an HTML comment `<!-- PHOTO-SLOT: SLOTNAME | WxH | swap with real photo -->`,
-- has a row in this file.
+## Live brand assets (in use)
 
-**Swap pass:** `grep -rn "PHOTO-SLOT" .` to find every slot to replace.
+| Asset                         | Used for                          | Source                |
+|-------------------------------|-----------------------------------|-----------------------|
+| `assets/brand/logo-horizontal-web.png` | Header lockup              | `logo-horizontal.png` |
+| `assets/brand/logo-reversed-web.png`   | Footer + About (on forest) | `logo-reversed.png`   |
+| `assets/brand/logo-stacked-web.png`    | Hero / feature badges      | `logo-stacked.png`    |
+| `assets/og-share.png` (1200×630)       | Social share card          | `logo-stacked.png`    |
+| `favicon-32 / 180 / 512 / .ico`        | Favicons / touch icon      | `badge-circle.png`    |
 
-| Slot               | Ratio     | Page(s)                | KB-03 shot (intended)                    | Status      |
-|--------------------|-----------|------------------------|------------------------------------------|-------------|
-| hero-truck-trailer | 1600×900  | Home                   | Truck + trailer, loaded, hero shot       | placeholder |
-| about-vehicle-1    | 1200×900  | About                  | The rig / vehicle, detail                | placeholder |
-| about-vehicle-2    | 1200×900  | About                  | Vehicle ready to work                    | placeholder |
-| action-jobsite     | 1600×900  | Home / About / Services| Owner working a job site (action)        | placeholder |
-| service-haul       | 800×600   | Home / Services        | Material delivery & spreading            | placeholder |
-| service-cleanup    | 800×600   | Home / Services        | Debris removal / hauling / cleanup       | placeholder |
-| service-lawn       | 800×600   | Services               | Lawn / light landscaping (coming soon)   | placeholder |
-| design-sample      | 800×600   | Home / Services / design| AI Landscape Design before/after render | placeholder |
-| og-share           | 1200×630  | meta (all pages)       | Brand social share card                  | placeholder (SVG — replace with PNG/JPG) |
+The `*-web.png` files are trimmed + quantized derivatives of the full-resolution
+source logos in `assets/brand/` (kept for future high-res use). Regenerate with
+the Pillow script in the build history if the source logos change.
 
-## Notes
+## Optional future photography
 
-- `og-share` currently ships as `assets/og-share.svg`. Most social crawlers prefer
-  PNG/JPG. When a real share card exists, save `assets/og-share.png` (1200×630) and
-  update the `og:image` paths in each page `<head>`.
-- `design-sample` real swap is gated on KB-09 portfolio piece #1 — the same gate that
-  unlocks `/design.html` indexing.
+If real job photos are added later, drop them into hero/feature/service blocks at
+a fixed aspect ratio (use `.ph-16x9` / `.ph-4x3` containers) so there is **no
+layout shift**. Until then the branded logo cards stand in.
+
+- `yard-sign.png` (in `assets/brand/`) is the physical yard-sign artwork — handy
+  reference for tone, not used on the site directly.
+- `design.html`'s real before/after render is gated on **KB-09** (portfolio
+  piece #1) — the same gate that unlocks `/design.html` indexing.

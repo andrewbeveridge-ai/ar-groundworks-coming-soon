@@ -1,7 +1,14 @@
+# SITE-WIDE NO-INDEX until GL insurance binds (the bind gate).
+# The site is LIVE on the real domain but must NOT be crawlable until GL is
+# bound, because the "Licensed & Insured" claim is in the page code.
+# See BIND-DAY-FLIP.md for the one-step change to go indexable.
 User-agent: *
-Allow: /
+Disallow: /
 
-# Unlinked scaffold — not for indexing until KB-09 launch gate (portfolio piece #1)
-Disallow: /design.html
-
+# --- BIND-DAY FLIP (do NOT apply until GL binds) ---
+# Replace everything above with:
+#   User-agent: *
+#   Allow: /
+#   Disallow: /design.html      # design.html keeps its own noindex until KB-09
+#
 Sitemap: https://archcitypropertycare.com/sitemap.xml

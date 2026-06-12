@@ -1,6 +1,21 @@
 [build]
   publish = "."
 
+# --- Old brand → new brand 301 (website only; email DNS is untouched) ---
+# Takes effect once anotherrealmgroundworks.com is attached to this Netlify site
+# as a domain alias and its WEBSITE DNS points here. Do NOT touch MX/SPF/DKIM/DMARC.
+[[redirects]]
+  from = "https://anotherrealmgroundworks.com/*"
+  to = "https://archcitypropertycare.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.anotherrealmgroundworks.com/*"
+  to = "https://archcitypropertycare.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -8,6 +23,8 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    # While no-index: belt-and-suspenders header echoing the meta/robots gate.
+    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/css/*"
@@ -18,3 +35,8 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
