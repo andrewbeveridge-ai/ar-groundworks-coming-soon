@@ -1,0 +1,6 @@
+# Netlify CLI local state (links this clone to a Netlify site — not source)
+.netlify/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
