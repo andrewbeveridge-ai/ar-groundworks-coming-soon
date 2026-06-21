@@ -125,7 +125,7 @@
       var payload = {
         entity: ENTITY,                              // hardcoded — preserve exactly
         dba: DBA,                                     // hardcoded — preserve exactly
-        source: 'archcity-website-quote-form',        // preserve exactly
+        source: quoteForm.getAttribute('data-source') || 'web:quote', // per-page source (web:<slug>)
         name: name,
         consent_sms: !!(consentEl && consentEl.checked),
         consent_text: CONSENT_TEXT,
@@ -168,7 +168,7 @@
       var payload = {
         entity: ENTITY,                              // hardcoded — preserve exactly
         dba: DBA,                                     // hardcoded — preserve exactly
-        source: 'archcity-website-waitlist',          // preserve exactly
+        source: waitForm.getAttribute('data-source') || 'web:waitlist', // per-page source (web:<slug>)
         service_wanted: 'Recurring Mowing (Waitlist)', // preserve exactly
         name: name,
         location: zip,                                // ZIP sent in BOTH location...

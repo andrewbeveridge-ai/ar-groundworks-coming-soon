@@ -65,11 +65,11 @@
       <div class="form-card">
         <p class="form-reassurance">Join the waitlist — your ZIP tells us which route you're on.</p>
 
-        <!-- [WAITLIST] form → source="archcity-website-waitlist",
+        <!-- [WAITLIST] form → source="web:waitlist" (via data-source),
              service_wanted="Recurring Mowing (Waitlist)". ZIP is required client-side
              and sent in BOTH location and zip. Field names, hardcoded entity/dba,
              honeypot and consent fields are wired in /js/site.js — preserve exactly. -->
-        <form id="waitlistForm" novalidate>
+        <form id="waitlistForm" data-source="web:waitlist" novalidate>
           <div class="field">
             <label for="w-name">Name <span class="req">*</span></label>
             <input type="text" id="w-name" name="name" autocomplete="name" required>

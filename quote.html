@@ -58,10 +58,10 @@
       <div class="form-card">
         <p class="form-reassurance">Free, all-in custom quotes — no obligation, usually a same-day reply.</p>
 
-        <!-- [QUOTE] form → source="archcity-website-quote-form".
+        <!-- [QUOTE] form → source="web:quote" (via data-source).
              Field names, hardcoded entity/dba, source, honeypot and consent
              fields are wired in /js/site.js and must be preserved exactly. -->
-        <form id="quoteForm" novalidate>
+        <form id="quoteForm" data-source="web:quote" novalidate>
           <div class="field">
             <label for="q-name">Name <span class="req">*</span></label>
             <input type="text" id="q-name" name="name" autocomplete="name" required>
