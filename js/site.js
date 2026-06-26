@@ -26,10 +26,26 @@
     if (norm === path) a.classList.add('active');
   });
 
-  /* ---------- Prefill service_wanted from ?service= (quote CTAs) ---------- */
-  var presetService = new URLSearchParams(location.search).get('service');
-  var serviceField = document.getElementById('q-service');
-  if (presetService && serviceField && !serviceField.value) serviceField.value = presetService;
+  /* ---------- Service chips: define sync + prefill from ?service= ---------- */
+  function syncServiceChips(form){
+    var group = form.querySelector('.chip-group');
+    var hidden = form.querySelector('input[name="service_wanted"]');
+    if(!group || !hidden) return;
+    var picked = Array.prototype.map.call(
+      group.querySelectorAll('input[type="checkbox"]:checked'), function(c){ return c.value; });
+    if (hidden.dataset && hidden.dataset.preset) picked.push(hidden.dataset.preset);
+    hidden.value = picked.join(', ');
+  }
+  (function(){
+    var presetService = new URLSearchParams(location.search).get('service');
+    if (!presetService) return;
+    var hid = document.getElementById('q-service');
+    var matched = false;
+    document.querySelectorAll('.chip-group input[type="checkbox"]').forEach(function(c){
+      if (c.value.toLowerCase() === presetService.toLowerCase()) { c.checked = true; matched = true; }
+    });
+    if (!matched && hid) hid.dataset.preset = presetService;
+  })();
 
   /* ============================================================
      LEAD CAPTURE
@@ -109,6 +125,7 @@
     quoteForm.addEventListener('submit', function (e) {
       e.preventDefault();
       clearError(quoteForm);
+      syncServiceChips(quoteForm);
 
       var name = val(quoteForm, 'name');
       var phone = val(quoteForm, 'phone');

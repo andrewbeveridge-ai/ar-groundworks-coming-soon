@@ -79,8 +79,19 @@
           </div>
 
           <div class="field">
-            <label for="q-service">What do you need?</label>
-            <input type="text" id="q-service" name="service_wanted" placeholder="e.g. junk hauling, gutter cleaning, mulch delivery…">
+            <label>What do you need? <span class="field-hint">(tick all that apply)</span></label>
+            <div class="chip-group">
+              <label class="chip"><input type="checkbox" value="Junk Removal &amp; Hauling"><span>Junk Removal &amp; Hauling</span></label>
+              <label class="chip"><input type="checkbox" value="Property / Storm / Construction Cleanup"><span>Property / Storm / Construction Cleanup</span></label>
+              <label class="chip"><input type="checkbox" value="Material Delivery &amp; Spreading"><span>Material Delivery &amp; Spreading</span></label>
+              <label class="chip"><input type="checkbox" value="Gutter Cleaning &amp; Guards"><span>Gutter Cleaning &amp; Guards</span></label>
+              <label class="chip"><input type="checkbox" value="Window Cleaning"><span>Window Cleaning</span></label>
+              <label class="chip"><input type="checkbox" value="Leaf &amp; Seasonal Cleanup"><span>Leaf &amp; Seasonal Cleanup</span></label>
+              <label class="chip"><input type="checkbox" value="Light Landscaping"><span>Light Landscaping</span></label>
+              <label class="chip"><input type="checkbox" value="Lawn Care (waitlist)"><span>Lawn Care <em>— routes filling</em></span></label>
+              <label class="chip"><input type="checkbox" value="Something else"><span>Something else</span></label>
+            </div>
+            <input type="hidden" id="q-service" name="service_wanted">
           </div>
 
           <div class="field">
