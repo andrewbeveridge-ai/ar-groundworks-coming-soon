@@ -358,3 +358,7 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
+
+/* --- Typography: prevent orphaned/widowed words (2026-06-25) --- */
+h1, h2, h3 { text-wrap: balance; }
+p, li      { text-wrap: pretty; }
