@@ -93,96 +93,13 @@
     </div>
   </section>
 
-  <!-- ===== Quote form (also lives on /quote.html) ===== -->
+  <!-- ===== Quote CTA (form lives on /quote.html) ===== -->
   <section class="bg-cream2">
-    <div class="container section-head" style="margin-bottom:1.6rem;">
+    <div class="container section-head" style="margin-bottom:1.2rem;">
       <span class="eyebrow">Free Quote · Custom Price</span>
-      <h2>Get a Free Quote</h2>
-    </div>
-    <div class="container">
-      <div class="form-card" style="background:#fff;">
-        <p class="form-reassurance">Free, all-in custom quotes — no obligation, usually a same-day reply.</p>
-
-        <!-- [QUOTE] form → source="web:contact" (via data-source).
-             Field names, hardcoded entity/dba, source, honeypot and consent
-             fields are wired in /js/site.js and must be preserved exactly. -->
-        <form id="quoteForm" data-source="web:contact" novalidate>
-          <div class="field">
-            <label for="q-name">Name <span class="req">*</span></label>
-            <input type="text" id="q-name" name="name" autocomplete="name" required>
-          </div>
-
-          <div class="field">
-            <label for="q-phone">Phone</label>
-            <input type="tel" id="q-phone" name="phone" autocomplete="tel" inputmode="tel">
-          </div>
-
-          <div class="field">
-            <label for="q-email">Email</label>
-            <input type="email" id="q-email" name="email" autocomplete="email" inputmode="email">
-            <p class="field-hint">Add a phone number or an email so we can reach you — at least one is required.</p>
-          </div>
-
-          <div class="field">
-            <label>What do you need? <span class="field-hint">(tick all that apply)</span></label>
-            <div class="chip-group">
-              <label class="chip"><input type="checkbox" value="Junk Removal &amp; Hauling"><span>Junk Removal &amp; Hauling</span></label>
-              <label class="chip"><input type="checkbox" value="Property / Storm / Construction Cleanup"><span>Property / Storm / Construction Cleanup</span></label>
-              <label class="chip"><input type="checkbox" value="Material Delivery &amp; Spreading"><span>Material Delivery &amp; Spreading</span></label>
-              <label class="chip"><input type="checkbox" value="Gutter Cleaning &amp; Guards"><span>Gutter Cleaning &amp; Guards</span></label>
-              <label class="chip"><input type="checkbox" value="Window Cleaning"><span>Window Cleaning</span></label>
-              <label class="chip"><input type="checkbox" value="Leaf &amp; Seasonal Cleanup"><span>Leaf &amp; Seasonal Cleanup</span></label>
-              <label class="chip"><input type="checkbox" value="Light Landscaping"><span>Light Landscaping</span></label>
-              <label class="chip"><input type="checkbox" value="Lawn Care (waitlist)"><span>Lawn Care <em>— routes filling</em></span></label>
-              <label class="chip"><input type="checkbox" value="Something else"><span>Something else</span></label>
-            </div>
-            <input type="hidden" id="q-service" name="service_wanted">
-          </div>
-
-          <div class="field">
-            <label for="q-location">Job location / ZIP</label>
-            <input type="text" id="q-location" name="location" placeholder="Street, neighborhood, or ZIP code" autocomplete="postal-code">
-          </div>
-
-          <div class="field">
-            <label for="q-notes">Anything else? (optional)</label>
-            <textarea id="q-notes" name="notes" placeholder="Size, access, timing — anything that helps us quote it right."></textarea>
-          </div>
-
-          <div class="field">
-            <label for="q-contact">Preferred contact method (optional)</label>
-            <select id="q-contact" name="preferred_contact">
-              <option value="" selected>No preference</option>
-              <option value="phone">Phone</option>
-              <option value="text">Text</option>
-              <option value="email">Email</option>
-              <option value="any">Any</option>
-            </select>
-          </div>
-
-          <!-- Honeypot: must stay empty; off-screen and aria-hidden. -->
-          <div class="hp-field" aria-hidden="true">
-            <label for="q-hp">Leave this field blank</label>
-            <input type="text" id="q-hp" name="_hp" tabindex="-1" autocomplete="off">
-          </div>
-
-          <!-- Consent: OPTIONAL — never required to submit.
-               ⚠️ consent_text is a PLACEHOLDER pending attorney review (see js/site.js). -->
-          <div class="consent-row">
-            <input type="checkbox" id="q-consent" name="consent_sms">
-            <label for="q-consent">I agree to receive calls and text messages from Arch City Property Care about my request. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help. Consent is not a condition of service.</label>
-          </div>
-
-          <button type="submit" class="btn btn-primary form-submit">Request My Free Quote</button>
-          <div class="form-error" id="quoteError" role="alert" aria-live="assertive"></div>
-        </form>
-
-        <div class="form-success" id="quoteSuccess" role="status" aria-live="polite">
-          <div class="fs-mark" aria-hidden="true">◆</div>
-          <h3>Got it — thank you!</h3>
-          <p>We've received your request and we'll reach out shortly — usually the same day. Prefer to talk now? Call or text <a href="tel:+13802612194" class="nowrap">(380) 261-2194</a>.</p>
-        </div>
-      </div>
+      <h2>Ready for a Free Quote?</h2>
+      <p class="section-lead">Tell us about your job and we'll send a free, all-in custom quote — no obligation, usually a same-day reply.</p>
+      <a class="btn btn-primary" href="/quote.html">Get a Free Quote</a>
     </div>
   </section>
 
@@ -196,7 +113,7 @@
       <span class="sep">·</span>
       <a href="mailto:info@archcitypropertycare.com" class="nowrap">info@archcitypropertycare.com</a>
       <span class="sep">·</span>
-      <span class="nowrap">Columbus &amp; surrounding suburbs</span>
+      <span class="nowrap">Columbus &amp; Surrounding Suburbs</span>
     </p>
     <p class="footer-legal">© 2026 Arch City Property Care | archcitypropertycare.com</p>
     <p class="footer-sub"><a href="/legal.html#terms">Terms</a><span class="sep">·</span><a href="/legal.html#privacy">Privacy</a><span class="sep">·</span><a href="/legal.html#insurance">Insurance Disclosure</a></p>
