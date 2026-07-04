@@ -384,3 +384,19 @@ p, li      { text-wrap: pretty; }
 .hero-actions { align-items: center; }
 .hero-textlink { color: rgba(246,233,218,.9); font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
 .hero-textlink:hover { color: var(--cream); }
+
+/* --- Item 2: mobile tap-to-call bar (2026-06-27) --- */
+.call-bar { display: none; }
+@media (max-width: 760px) {
+  .call-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    display: flex; gap: .5rem; align-items: stretch;
+    background: var(--forest); border-top: 2px solid var(--gold);
+    padding: .5rem .75rem calc(.5rem + env(safe-area-inset-bottom));
+  }
+  .call-bar-btn { display: flex; align-items: center; justify-content: center;
+    padding: .7rem .6rem; border-radius: 6px; font-weight: 700; font-size: .95rem; border: 2px solid transparent; }
+  .call-bar-primary { flex: 1 1 auto; background: var(--accent); color: #fff; }
+  .call-bar-btn:not(.call-bar-primary) { flex: 0 0 auto; min-width: 84px; background: transparent; color: var(--cream); border-color: rgba(246,233,218,.5); }
+  body { padding-bottom: 4.5rem; }   /* keep footer + form submit clear of the fixed bar */
+}
