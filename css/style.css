@@ -57,9 +57,10 @@ h1, h2, h3 {
   line-height: 1.1; font-weight: 600; color: var(--forest); letter-spacing: -.01em;
 }
 h1 { font-size: clamp(2.1rem, 5.4vw, 3.5rem); font-weight: 700; }
-h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.6rem); font-weight: 700; }
 h3 { font-size: clamp(1.2rem, 2.4vw, 1.45rem); }
 p { max-width: 68ch; }
+.section-lead, .lead { max-width: 640px; }
 
 .eyebrow {
   display: inline-block;
@@ -129,8 +130,8 @@ p { max-width: 68ch; }
 }
 
 /* ---------- Sections ---------- */
-section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
-.section-head { text-align: center; margin-bottom: 2.6rem; }
+section { padding: clamp(2.75rem, 6vw, 4.75rem) 0; }
+.section-head { text-align: center; margin-bottom: 2.1rem; }
 .bg-forest { background: var(--forest); color: var(--cream); }
 .bg-forest h1, .bg-forest h2, .bg-forest h3 { color: var(--cream); }
 .bg-forest .eyebrow { color: var(--gold); }
@@ -138,7 +139,7 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 .bg-cream2 { background: var(--cream-2); }
 
 /* ---------- Hero ---------- */
-.hero { background: var(--forest); color: var(--cream); position: relative; }
+.hero { background: var(--forest); color: var(--cream); position: relative; padding-bottom: clamp(2.4rem, 5vw, 3.5rem); }
 .hero::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
   background: linear-gradient(90deg, var(--accent), var(--gold), var(--brown));
