@@ -400,3 +400,7 @@ p, li      { text-wrap: pretty; }
   .call-bar-btn:not(.call-bar-primary) { flex: 0 0 auto; min-width: 84px; background: transparent; color: var(--cream); border-color: rgba(246,233,218,.5); }
   body { padding-bottom: 4.5rem; }   /* keep footer + form submit clear of the fixed bar */
 }
+
+/* --- Item 3: form reassurance note (2026-06-27) --- */
+.form-note { text-align: center; color: var(--ink-soft); font-size: .9rem; margin: .9rem 0 .8rem; }
+.cta-strip .form-note, .bg-cream2 .form-note { margin-top: 1rem; }
