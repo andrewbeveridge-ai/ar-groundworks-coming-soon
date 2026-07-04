@@ -309,9 +309,9 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2rem; align-items: start; }
 .contact-block { background: var(--cream-2); border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem 1.8rem; }
 .contact-block h3 { margin-bottom: 1rem; }
-.contact-line { display: flex; align-items: baseline; gap: .7rem; margin-bottom: .9rem; font-size: 1.05rem; }
+.contact-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .7rem; margin-bottom: .9rem; font-size: 1.05rem; }
 .contact-line .cl-label { color: var(--ink-soft); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; min-width: 56px; font-weight: 600; }
-.contact-line a { color: var(--charcoal); font-weight: 600; }
+.contact-line a { color: var(--charcoal); font-weight: 600; overflow-wrap: anywhere; }
 .contact-line a:hover { color: var(--accent); }
 .hours-row { display: flex; justify-content: space-between; padding: .55rem 0; border-bottom: 1px solid var(--line-soft); }
 .hours-row:last-child { border-bottom: none; }
