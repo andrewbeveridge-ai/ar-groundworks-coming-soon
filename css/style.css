@@ -146,6 +146,7 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 .hero .eyebrow { color: var(--gold); }
 .hero h1 { color: var(--cream); margin-bottom: 1rem; max-width: 16ch; }
 .hero p.lead { color: rgba(246,233,218,.88); margin-bottom: 1.9rem; max-width: 52ch; }
+.hero .section-lead { color: rgba(246,233,218,.88); }   /* readable lead on the forest hero */
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; }
 .hero-trust { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: .55rem 1.4rem; list-style: none; }
 .hero-trust li { font-size: .92rem; font-weight: 600; color: rgba(246,233,218,.92); }
