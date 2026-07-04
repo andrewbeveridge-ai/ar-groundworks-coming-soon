@@ -374,7 +374,7 @@ p, li      { text-wrap: pretty; }
 
 /* --- Service checkboxes (2026-06-26) --- */
 .chip-group { display:flex; flex-direction:column; gap:.55rem; margin-top:.5rem; }
-.chip { display:flex; align-items:center; gap:.85rem; font-weight:600; cursor:pointer; }
-.chip input[type="checkbox"] { width:1.15rem; height:1.15rem; min-height:0; flex:none; margin:0; accent-color:var(--accent); cursor:pointer; }
+.chip { display:flex; align-items:flex-start; gap:.9rem; font-weight:600; cursor:pointer; }
+.chip input[type="checkbox"] { width:1.15rem; height:1.15rem; min-height:0; flex:none; margin:.2rem 0 0; accent-color:var(--accent); cursor:pointer; }
 .chip span { font-weight:600; }
 .chip span em { font-style:normal; opacity:.7; font-weight:500; }
