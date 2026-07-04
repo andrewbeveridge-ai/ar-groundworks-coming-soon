@@ -7,13 +7,29 @@
 (function () {
   'use strict';
 
-  /* ---------- Mobile nav toggle ---------- */
+  /* ---------- Mobile nav toggle (with focus trap + return) ---------- */
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
   if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
+    function navLinks() { return Array.prototype.slice.call(nav.querySelectorAll('a')); }
+    function setNav(open) {
+      nav.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) { var l = navLinks(); if (l[0]) l[0].focus(); }
+    }
+    toggle.addEventListener('click', function () {
+      setNav(!nav.classList.contains('open'));
+    });
+    // Only active while the mobile menu is open; desktop nav never has .open
+    document.addEventListener('keydown', function (e) {
+      if (!nav.classList.contains('open')) return;
+      if (e.key === 'Escape') { setNav(false); toggle.focus(); return; }
+      if (e.key === 'Tab') {
+        var l = navLinks(); if (!l.length) return;
+        var first = l[0], last = l[l.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); toggle.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); toggle.focus(); }
+      }
     });
   }
 

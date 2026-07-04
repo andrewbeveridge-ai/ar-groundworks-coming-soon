@@ -405,3 +405,9 @@ p, li      { text-wrap: pretty; }
 /* --- Item 3: form reassurance note (2026-06-27) --- */
 .form-note { text-align: center; color: var(--ink-soft); font-size: .9rem; margin: .9rem 0 .8rem; }
 .cta-strip .form-note, .bg-cream2 .form-note { margin-top: 1rem; }
+
+/* --- Item 6: skip link (2026-06-27) --- */
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--forest); color: var(--cream); padding: .7rem 1.1rem; font-weight: 700;
+  border-radius: 0 0 6px 0; }
+.skip-link:focus { left: 0; color: var(--cream); outline: 3px solid var(--gold); outline-offset: -3px; }
