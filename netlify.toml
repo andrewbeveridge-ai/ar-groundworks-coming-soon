@@ -23,8 +23,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    # While no-index: belt-and-suspenders header echoing the meta/robots gate.
-    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/css/*"
