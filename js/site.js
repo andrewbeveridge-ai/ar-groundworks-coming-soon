@@ -151,6 +151,10 @@
       if (!phone && !email) { showError(quoteForm, 'Please enter a phone number or an email so we can reach you.'); return; }
       if (email && !emailRe.test(email)) { showError(quoteForm, 'Please enter a valid email (e.g. name@domain.com).'); return; }
       if (phone && phone.replace(/\D/g, '').length !== 10) { showError(quoteForm, 'Please enter a valid 10-digit US phone number.'); return; }
+      // Location stays flexible (street / neighborhood / ZIP) but rejects junk like "4322k":
+      // accept a 5-digit ZIP, OR text with >= 3 letters. Optional — empty is allowed.
+      var locVal = val(quoteForm, 'location');
+      if (locVal && !/^\d{5}$/.test(locVal) && (locVal.match(/[a-zA-Z]/g) || []).length < 3) { showError(quoteForm, 'Please enter a valid ZIP code or a street/neighborhood.'); return; }
 
       // Consent is REQUIRED to submit (SMS/A2P). Hard-block, no POST, until checked.
       var consentEl = quoteForm.elements['consent_sms'];
