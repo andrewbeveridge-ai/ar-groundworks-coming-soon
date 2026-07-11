@@ -109,7 +109,7 @@
               <option value="phone">Phone</option>
               <option value="text">Text</option>
               <option value="email">Email</option>
-              <option value="any">Any</option>
+              <option value="">Any</option>
             </select>
           </div>
 
@@ -119,7 +119,7 @@
             <input type="text" id="q-hp" name="_hp" tabindex="-1" autocomplete="off">
           </div>
 
-          <!-- Consent: OPTIONAL — never required to submit.
+          <!-- Consent: REQUIRED to submit (SMS/A2P) — hard-blocked in js/site.js.
                ⚠️ consent_text is a PLACEHOLDER pending attorney review (see js/site.js). -->
           <div class="consent-row">
             <input type="checkbox" id="q-consent" name="consent_sms">
