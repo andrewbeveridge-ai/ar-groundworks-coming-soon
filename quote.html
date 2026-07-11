@@ -10,14 +10,14 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Get a Free Quote — Arch City Property Care">
-  <meta property="og:description" content="Free, all-in quotes. Same owner every visit. Columbus & suburbs.">
+  <meta property="og:description" content="Free quotes. Same owner every visit. Columbus & suburbs.">
   <meta property="og:url" content="https://archcitypropertycare.com/quote.html">
   <meta property="og:image" content="https://archcitypropertycare.com/assets/og-share.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=6298a18">
 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
@@ -54,7 +54,7 @@
 
     <div class="container">
       <div class="form-card">
-        <p class="form-reassurance">Free, all-in quotes — no obligation, usually a same-day reply.</p>
+        <p class="form-reassurance">Free quotes — no obligation, usually a same-day reply.</p>
 
         <!-- [QUOTE] form → source="web:quote" (via data-source).
              Field names, hardcoded entity/dba, source, honeypot and consent
@@ -109,7 +109,7 @@
               <option value="phone">Phone</option>
               <option value="text">Text</option>
               <option value="email">Email</option>
-              <option value="any">Any</option>
+              <option value="">Any</option>
             </select>
           </div>
 
@@ -119,7 +119,7 @@
             <input type="text" id="q-hp" name="_hp" tabindex="-1" autocomplete="off">
           </div>
 
-          <!-- Consent: OPTIONAL — never required to submit.
+          <!-- Consent: REQUIRED to submit (SMS/A2P) — hard-blocked in js/site.js.
                ⚠️ consent_text is a PLACEHOLDER pending attorney review (see js/site.js). -->
           <div class="consent-row">
             <input type="checkbox" id="q-consent" name="consent_sms">
@@ -163,6 +163,6 @@
   <a class="call-bar-btn" href="sms:+13802612194">Text</a>
 </nav>
 
-<script src="/js/site.js"></script>
+<script src="/js/site.js?v=6298a18"></script>
 </body>
 </html>
