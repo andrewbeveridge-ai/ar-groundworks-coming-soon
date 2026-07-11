@@ -201,6 +201,7 @@
       if (!name) { showError(waitForm, 'Please enter your name.'); return; }
       if (!phone && !email) { showError(waitForm, 'Please enter a phone number or an email so we can reach you.'); return; }
       if (email && !emailRe.test(email)) { showError(waitForm, 'Please enter a valid email (e.g. name@domain.com).'); return; }
+      if (phone && phone.replace(/\D/g, '').length !== 10) { showError(waitForm, 'Please enter a valid 10-digit US phone number.'); return; }
       if (!/^\d{5}$/.test(zip)) { showError(waitForm, 'Please enter your 5-digit ZIP code so we can place you on the right route.'); return; }
 
       // Consent is REQUIRED to submit (SMS/A2P). Hard-block, no POST, until checked.

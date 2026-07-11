@@ -1,5 +1,8 @@
 [build]
   publish = "."
+  # Auto cache-bust: stamp the deploy commit's short hash onto style.css / site.js
+  # references in every HTML file at build time (no manual ?v= bumping).
+  command = "bash scripts/stamp-version.sh"
 
 # --- Old brand → new brand 301 (website only; email DNS is untouched) ---
 # Takes effect once anotherrealmgroundworks.com is attached to this Netlify site
