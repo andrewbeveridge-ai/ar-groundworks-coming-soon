@@ -354,6 +354,17 @@ section { padding: clamp(2.75rem, 6vw, 4.75rem) 0; }
 .legal-body ul { padding-left: 1.3rem; }
 .legal-meta { color: var(--ink-soft); font-size: .85rem; }
 
+
+/* ---------- Trust Band ---------- */
+.trust-band {
+  background: var(--forest-2); text-align: center;
+  padding: .7rem 1rem; border-bottom: 2px solid var(--gold);
+}
+.trust-band p {
+  color: var(--cream); font-size: .82rem; font-weight: 600;
+  letter-spacing: .06em; max-width: none; margin: 0;
+}
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--forest); color: var(--cream); padding: 2.8rem 0 1.8rem; text-align: center; }
 .footer-logo { height: 50px; width: auto; margin: 0 auto 1.3rem; }
