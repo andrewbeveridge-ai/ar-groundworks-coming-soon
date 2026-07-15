@@ -156,9 +156,8 @@
       var locVal = val(quoteForm, 'location');
       if (locVal && !/^\d{5}$/.test(locVal) && (locVal.match(/[a-zA-Z]/g) || []).length < 3) { showError(quoteForm, 'Please enter a valid ZIP code or a street/neighborhood.'); return; }
 
-      // Consent is REQUIRED to submit (SMS/A2P). Hard-block, no POST, until checked.
+      // Consent (SMS/A2P) is OPTIONAL — never required to submit; recorded either way.
       var consentEl = quoteForm.elements['consent_sms'];
-      if (!(consentEl && consentEl.checked)) { showError(quoteForm, 'Please check the consent box so we can contact you about your request.'); return; }
 
       // Honeypot: if a bot filled the hidden field, fake success and never send.
       if (val(quoteForm, '_hp')) { succeed(quoteForm); return; }
@@ -204,9 +203,8 @@
       if (phone && phone.replace(/\D/g, '').length !== 10) { showError(waitForm, 'Please enter a valid 10-digit US phone number.'); return; }
       if (!/^\d{5}$/.test(zip)) { showError(waitForm, 'Please enter your 5-digit ZIP code so we can place you on the right route.'); return; }
 
-      // Consent is REQUIRED to submit (SMS/A2P). Hard-block, no POST, until checked.
+      // Consent (SMS/A2P) is OPTIONAL — never required to submit; recorded either way.
       var consentEl = waitForm.elements['consent_sms'];
-      if (!(consentEl && consentEl.checked)) { showError(waitForm, 'Please check the consent box so we can contact you about your request.'); return; }
 
       if (val(waitForm, '_hp')) { succeed(waitForm); return; }
 

@@ -119,12 +119,13 @@
             <input type="text" id="q-hp" name="_hp" tabindex="-1" autocomplete="off">
           </div>
 
-          <!-- Consent: REQUIRED to submit (SMS/A2P) — hard-blocked in js/site.js.
+          <!-- Consent: OPTIONAL — recorded but never required to submit (A2P/CTIA compliant).
                ⚠️ consent_text is a PLACEHOLDER pending attorney review (see js/site.js). -->
           <div class="consent-row">
             <input type="checkbox" id="q-consent" name="consent_sms">
             <label for="q-consent">I agree to receive calls and text messages from Arch City Property Care about my request. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help. Consent is not a condition of service.</label>
           </div>
+          <p class="field-hint" style="margin-top:.35rem;">See our <a href="/legal#privacy">Privacy Policy</a> and <a href="/legal#terms">Terms</a>.</p>
 
           <p class="form-note">We usually reply the same day.</p>
           <button type="submit" class="btn btn-primary form-submit">Request My Free Quote</button>
