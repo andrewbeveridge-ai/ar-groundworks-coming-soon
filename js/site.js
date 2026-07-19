@@ -103,6 +103,18 @@
 
   function succeed(form) {
     var success = form.parentNode.querySelector('.form-success');
+    if (success) {
+      // Success-message SELECTION only: pick the email vs phone-only variant by
+      // READING the email field value (read-only). Does NOT affect the payload or
+      // the fetch — those already ran before this. Runs before reset() so the
+      // value is still present.
+      var emailEl = form.elements['email'];
+      var hasEmail = !!(emailEl && emailEl.value && emailEl.value.trim());
+      var em = success.querySelector('.fs-email');
+      var ph = success.querySelector('.fs-phone');
+      if (em) em.style.display = hasEmail ? '' : 'none';
+      if (ph) ph.style.display = hasEmail ? 'none' : '';
+    }
     form.reset();
     form.style.display = 'none';
     if (success) {
