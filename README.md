@@ -14,9 +14,9 @@ or serve the folder.
 
 | File                | Purpose                                                          |
 |---------------------|-----------------------------------------------------------------|
-| `index.html`        | Home — hero, services, lawn waitlist, why/how/FAQ, final CTA     |
+| `index.html`        | Home — junk-removal-led hero, services, fall cleanup band, why/how/FAQ, final CTA |
 | `services.html`     | Services — available now / lawn waitlist / coming soon           |
-| `lawn-waitlist.html`| Lawn Care Waitlist — ZIP-required form + static route explainer  |
+| `junk-removal.html` | Junk Removal Columbus — primary SEO landing page (lawn waitlist retired 2026-10-02; old URL 301s to /services.html) |
 | `about.html`        | Owner-operated story + licensing/insurance (license 25-001496)   |
 | `quote.html`        | Free-quote form → Supabase `capture-lead`                        |
 | `contact.html`      | Phone/text/email, hours + embedded quote form                    |

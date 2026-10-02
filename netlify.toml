@@ -19,6 +19,19 @@
   status = 301
   force = true
 
+# --- Lawn waitlist retired (2026-10-02): send old links to Services ---
+[[redirects]]
+  from = "/lawn-waitlist.html"
+  to = "/services.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lawn-waitlist"
+  to = "/services.html"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
