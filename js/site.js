@@ -85,6 +85,25 @@
   var GENERIC_ERR = 'Something went wrong — please call or text us at (380) 261-2194';
   var emailRe = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
 
+  /* Solicitation filter. Conservative on purpose: a real customer should never
+     trip it. Blocks only (a) the fictional 555 exchange, which can't reach a real
+     person anyway, (b) one unmistakable vendor marker, or (c) two weaker ones. */
+  function looksLikeSolicitation(phone, notes, email) {
+    var d = (phone || '').replace(/\D/g, '');
+    if (d.length === 10 && d.substr(3, 3) === '555') return true;
+    var t = ((notes || '') + ' ' + (email || '')).toLowerCase();
+    if (!t.trim()) return false;
+    var strong = [/\bseo\b/, /whatsapp/, /\bloom\b/, /backlink/, /sorry for the contact form/,
+                  /couldn'?t find a better way to reach/, /(first|top) page of google/, /page 1\b/,
+                  /google (visibility|ranking|rankings)/, /\b(web|website) (design|redesign|developer|development)\b/];
+    for (var i = 0; i < strong.length; i++) { if (strong[i].test(t)) return true; }
+    var weak = [/\baudit\b/, /\branking/, /\btraffic\b/, /\bmarketing\b/, /\bagency\b/, /\bfree (audit|consultation|analysis)\b/,
+                /\byour (website|site|business listing)\b/, /\bleads? for you\b/, /\bfixed price\b/, /\bscope\b/];
+    var hits = 0;
+    for (var j = 0; j < weak.length; j++) { if (weak[j].test(t)) hits++; }
+    return hits >= 2;
+  }
+
   function val(form, name) {
     var el = form.elements[name];
     return el ? (el.value || '').trim() : '';
@@ -173,6 +192,13 @@
 
       // Honeypot: if a bot filled the hidden field, fake success and never send.
       if (val(quoteForm, '_hp')) { succeed(quoteForm); return; }
+
+      // Solicitation filter (added 2026-10-15): vendors pitching SEO / web design
+      // through the quote form. Fake success, never sent, logged to console only.
+      if (looksLikeSolicitation(phone, val(quoteForm, 'notes'), email)) {
+        console.warn('quote form: solicitation filtered, not sent');
+        succeed(quoteForm); return;
+      }
 
       var payload = {
         entity: ENTITY,                              // hardcoded — preserve exactly
