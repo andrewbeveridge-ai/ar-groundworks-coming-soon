@@ -265,6 +265,23 @@ section { padding: clamp(2.75rem, 6vw, 4.75rem) 0; }
   .hero-badge { max-width: 260px; padding: 1.4rem; }
 }
 
+/* ---------- Real photos (explicit width/height on <img> = no layout shift) ---------- */
+.photo-card {
+  margin: 0; width: 100%; max-width: 520px; border-radius: 16px; overflow: hidden;
+  background: var(--forest); box-shadow: 0 20px 50px -24px rgba(0,0,0,.6);
+  aspect-ratio: 4 / 3;
+}
+.photo-card img, .photo-band img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.about-media .photo-card { max-width: 100%; }
+.photo-band {
+  margin: 2rem auto 0; max-width: 1080px; border-radius: 14px; overflow: hidden;
+  background: var(--forest); aspect-ratio: 1600 / 667;
+}
+@media (max-width: 860px) {
+  .hero-media.has-photo { order: 0; }
+  .photo-card { max-width: 100%; }
+}
+
 /* ---------- Featured (coming soon) ---------- */
 .featured {
   display: grid; grid-template-columns: 1fr 1fr; gap: 2.2rem; align-items: center;
